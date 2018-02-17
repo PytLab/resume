@@ -45,3 +45,5 @@ myresume.tex
 myresume.pdf
 myresume-zh_CN.tex
 myresume-zh_CN.pdf
+
+*.swp
