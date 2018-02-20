@@ -57,8 +57,20 @@
     \item 使用MPI接口并行化蒙特卡洛模拟过程进行加速和提升可扩展性
     \item 使用SWIG为kMC C++库添加Python接口提升库的灵活性
     \item 采用了通用的三维晶格表示方法可以模拟任何晶体表面的动力学蒙特卡洛过程
-    \item 使用time-scale coupling/decoupling 方法克服了物种迁移低能垒问题
-    \item 完成论文\emph{ab initio} kinetic Monte Carlo simulation of CO Oxidation: Methods for overcoming the low-barrier diffusion problem
+    \item 使用time-scale coupling/decoupling 方法克服了物种迁移低能垒问题大幅度加速模拟的时间推进
+    \item 完成论文\emph{ab initio kinetic Monte Carlo simulation of CO Oxidation: Methods for overcoming the low-barrier diffusion problem}
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{催化动力学模拟包Kynetix的开发}}{2015年1月 -- 2017年1月}
+\role{Python, C++, Javascript, MPI, Linux} {独自开发, 指导教师: \faLink \href{http://chem.ecust.edu.cn/2014/1211/c6655a50467/page.htm}{曹宵鸣}副教授}
+\begin{onehalfspacing}
+\begin{itemize}
+    \item 实现催化动力学模拟程序包\emph{Kynetix}, 包括微观动力学求解器以及动力学蒙特卡洛模拟器 （未开源, GitHub private repository)
+    \item 基于牛顿法求解方程组以及数值求解微分方程(ODE)的方法来对催化动力学进行微观动力学求解
+    \item 将动力学蒙特卡洛库KMCLibX整合进Kynetix
+    \item 基于Boostrap+Flask使用Kynetix作为后端计算程序实现了微观动力学求解web应用\faLink \href{https://github.com/PytLab/KinLab}{KinLab} (\faLink \href{http://123.206.225.154:5000/}{Demo})
+    \item 完成论文\emph{Kynetix: A Software Package for chemical kinetics simulation}
 \end{itemize}
 \end{onehalfspacing}
 
