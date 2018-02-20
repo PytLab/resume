@@ -46,7 +46,19 @@
     \item 实现基于MPI的分布式通用Python遗传算法优化框架\faLink \href{https://github.com/PytLab/gaft}{GAFT}\ (\faStar\ 128 \ \faCodeFork\ 45)
     \item 实现基于MPI的分布式通用C++遗传算法求解器\faLink \href{https://github.com/PytLab/GASol}{GASol}\ (\faStar\ 3\ \faCodeFork\ 1)
   \item 基于GAFT实现反应力场ReaxFF的力场优化程序(未开源, GitHub private repository)
-  \item 优化PtO催化体系的反应力场势能面同第一性原理能量均方根误差达到0.1eV以下
+  \item 优化PtO催化体系的反应力场势能面同第一性原理能量均方根误差达到0.2eV以下
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{基于机器学习算法的催化剂表面物种相互作用的研究}}{2017年9月 -- 至今}
+\role{Python, scikit-learn, TensorFlow, jupyter notebook} {指导教师: \faLink \href{http://chem.ecust.edu.cn/2014/1211/c6655a50467/page.htm}{曹宵鸣}副教授}
+\begin{onehalfspacing}
+\begin{itemize}
+    \item 尝试使用不同机器学习模型(SVR, DNN, CNN)构建催化剂二维表面构型与形成能的回归关系
+    \item 通过表面二维结构对称性扩大表面构型形成能数据集
+    \item 使用自己开发的遗传算法框架GAFT对SVR模型超参数进行优化
+    \item 训练的模型对于1~2个物种覆盖的表面形成能预测误差低于0.2eV
+    \item 将训练的模型整合进KMC模拟中从而在动力学蒙特卡洛模拟中考虑物种间的相互作用
 \end{itemize}
 \end{onehalfspacing}
 
