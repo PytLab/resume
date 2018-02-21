@@ -57,7 +57,7 @@
     \item 尝试使用不同机器学习模型(SVR, DNN, CNN)构建催化剂二维表面构型与形成能的回归关系
     \item 通过表面二维结构对称性扩大表面构型形成能数据集
     \item 使用自己开发的遗传算法框架GAFT对SVR模型超参数进行优化
-    \item 训练的模型对于1~2个物种覆盖的表面形成能预测误差低于0.2eV
+    \item 训练的模型对于1-2个物种覆盖的表面形成能预测误差低于0.2eV
     \item 将训练的模型整合进KMC模拟中从而在动力学蒙特卡洛模拟中考虑物种间的相互作用
 \end{itemize}
 \end{onehalfspacing}
@@ -69,7 +69,6 @@
     \item 实现了Python/C++动力学蒙特卡洛(kMC)模拟库KMCLibX(未开源, GitHub private repository)
     \item 使用MPI接口并行化蒙特卡洛模拟过程进行加速和提升可扩展性
     \item 使用SWIG为kMC C++库添加Python接口提升库的灵活性
-    \item 采用了通用的三维晶格表示方法可以模拟任何晶体表面的动力学蒙特卡洛过程
     \item 使用time-scale coupling/decoupling 方法克服了物种迁移低能垒问题大幅度加速模拟的时间推进
     \item 完成论文\emph{ab initio kinetic Monte Carlo simulation of CO Oxidation: Methods for overcoming the low-barrier diffusion problem}
 \end{itemize}
@@ -81,7 +80,6 @@
 \begin{itemize}
     \item 实现催化动力学模拟程序包\emph{Kynetix}, 包括微观动力学求解器以及动力学蒙特卡洛模拟器 （未开源, GitHub private repository)
     \item 基于牛顿法求解方程组以及数值求解微分方程(ODE)的方法来对催化动力学进行微观动力学求解
-    \item 将动力学蒙特卡洛库KMCLibX整合进Kynetix
     \item 基于Boostrap+Flask使用Kynetix作为后端计算程序实现了微观动力学求解web应用\faLink \href{https://github.com/PytLab/KinLab}{KinLab} (\faLink \href{http://123.206.225.154:5000/}{Demo})
     \item 完成论文\emph{Kynetix: A Software Package for chemical kinetics simulation}
 \end{itemize}
@@ -122,6 +120,15 @@
     \item \textbf{项目简介}: 仿TensorFlow接口的简化版图计算框架
     \item \textbf{主要特性}: 提供了计算图中常用的操作以及求导方法; 实现了前向传播与反向传播; 实现了梯度下降优化器;
     \item \textbf{项目指数}: \faStar\ 48\, \faCodeFork\ 10
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\href{https://github.com/PytLab/catplot}{\emph{catplot}}, \emph{作者}}{2015年3月}
+\begin{onehalfspacing}
+\begin{itemize}
+    \item \textbf{项目简介}: 基于matplotlib的2D/3D抽象网格和能量曲线绘制程序
+    \item \textbf{主要特性}: 使用插值算法绘制优美的能量曲线; 友好的接口方便灵活绘制2D/3D晶格示意图; 使用该程序作图发表的论文超过10篇
+    \item \textbf{项目指数}: \faStar\ 19\, \faCodeFork\ 8
 \end{itemize}
 \end{onehalfspacing}
 
