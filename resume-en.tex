@@ -1,0 +1,150 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !Mode:: "TeX:UTF-8"
+
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
+\usepackage{linespacing_fix} % disable extra space before next section
+\usepackage{cite}
+
+\begin{document}
+\pagenumbering{gobble} % suppress displaying page number
+
+\name{Shao Zhengjiang}
+
+\basicInfo{
+  \email{shaozhengjiang@gmail.com} \textperiodcentered\
+  \phone{185-1669-0432} \textperiodcentered\
+  \faGithub\ \href{https://github.com/PytLab}{PytLab} \textperiodcentered\
+  \faLink\ \href{http://pytlab.org}{pytlab.org}}
+ 
+\section{\faGraduationCap\  Education}
+\datedsubsection{\textbf{Center for Computational Chemistry, ECUST}, Shanghai}{2014 -- Present}
+\textit{PhD Candidate} in Computational Chemistry, expected June 2019
+\datedsubsection{\textbf{East China University of Science and Technology (ECUST)}, Shanghai}{2010 -- 2014}
+\textit{B.S.} in Computer Science and Technology (Second Major)
+\datedsubsection{\textbf{East China University of Science and Technology (ECUST)}, Shanghai}{2010 -- 2014}
+\textit{B.S.} in Material Chemistry
+
+\section{\faCogs\ 技能}
+\begin{itemize}[parsep=0.5ex]
+  \item 编程语言: Python, C++, C, ECMAScript, Shell
+  \item 操作系统: Linux, macOS, Windows
+  \item 开发工具: Vim, Git, CMake, gdb, SWIG
+  \item 开发框架: MPI, TensorFlow, sklearn, Flask
+  \item 数学基础: 线性代数, 遗传算法, 最优化方法
+  \item 测试工具: PyUnit, CppUnit, Googletest
+  \item 英语能力: CET6 (568)
+\end{itemize}
+
+\section{\faUsers\ 科研项目}
+
+\datedsubsection{\textbf{实现基于遗传算法的反应力场(ReaxFF)的通用优化方法}}{2017年8月 -- 2018年1月}
+\role{Python, C++, MPI, Linux}{独自开发, 指导教师: \faLink \href{http://www.ecust.edu.cn/2016/1018/c226a56807/page.htm}{胡培君}教授}
+\begin{onehalfspacing}
+\begin{itemize}
+    \item 实现基于MPI的分布式通用Python遗传算法优化框架\faLink \href{https://github.com/PytLab/gaft}{GAFT}\ (\faStar\ 128 \ \faCodeFork\ 45)
+  \item 基于GAFT实现反应力场ReaxFF的力场优化程序(未开源, GitHub private repository)
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{基于机器学习算法的催化剂表面物种相互作用的研究}}{2017年9月 -- 至今}
+\role{Python, scikit-learn, TensorFlow, jupyter notebook} {指导教师: \faLink \href{http://chem.ecust.edu.cn/2014/1211/c6655a50467/page.htm}{曹宵鸣}副教授}
+\begin{onehalfspacing}
+\begin{itemize}
+    \item 尝试使用不同机器学习模型(SVR, DNN, CNN)构建催化剂二维表面构型与形成能的回归关系
+    \item 使用自己开发的遗传算法框架GAFT对SVR模型超参数进行优化
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{\emph{ab initio} kMC模拟中克服物种迁移低能垒问题的新方法研究}}{2016年9月 -- 2017年5月}
+\role{Python, C++, MPI, Linux} {独自开发, 指导教师: \faLink \href{http://chem.ecust.edu.cn/2014/1211/c6655a50467/page.htm}{曹宵鸣}副教授}
+\begin{onehalfspacing}
+\begin{itemize}
+    \item 实现了Python/C++动力学蒙特卡洛(kMC)模拟库KMCLibX(未开源, GitHub private repository)
+    \item 使用SWIG为kMC C++库添加Python接口提升库的灵活性并使用MPI进行并行处理
+    \item 使用time-scale coupling/decoupling 方法克服了物种迁移低能垒问题大幅度加速模拟的时间推进
+    \item 完成论文\emph{ab initio kinetic Monte Carlo simulation of CO Oxidation: Methods for overcoming the low-barrier diffusion problem}
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{催化动力学模拟包Kynetix的开发}}{2015年1月 -- 2017年1月}
+\role{Python, C++, Javascript, MPI, Linux} {独自开发, 指导教师: \faLink \href{http://chem.ecust.edu.cn/2014/1211/c6655a50467/page.htm}{曹宵鸣}副教授}
+\begin{onehalfspacing}
+\begin{itemize}
+    \item 实现催化动力学模拟程序包\emph{Kynetix}, 包括微观动力学求解器以及动力学蒙特卡洛模拟器 （未开源, GitHub private repository)
+    \item 基于Boostrap+Flask使用Kynetix作为后端计算程序实现了微观动力学求解web应用\faLink \href{https://github.com/PytLab/KinLab}{KinLab} (\faLink \href{http://123.206.225.154:5000/}{Demo})
+    \item 完成论文\emph{Kynetix: A Software Package for chemical kinetics simulation}
+\end{itemize}
+\end{onehalfspacing}
+
+\section{\faUser\ 个人开源项目}
+
+\datedsubsection{\href{https://github.com/PytLab/gaft}{\emph{gaft}}\ (\faStar\ 129\ \faCodeFork\ 45), \emph{作者}}{2017年8月}
+\begin{onehalfspacing}
+\begin{itemize}
+    \item \textbf{项目简介}: 通用的Python遗传算法框架, 可快速根据需求编写遗传算法求解脚本优化目标函数
+    \item \textbf{主要特性}: 内置常用遗传算子和编码方式; 支持自定义遗传算子和编码; 支持自定义on-the-fly分析插件的编写; 支持自定义适应度函数; 使用MPI for Python并行化遗传算法
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\href{https://github.com/PytLab/GASol}{\emph{GASol}}\ (\faStar\ 3\ \faCodeFork\ 1), \emph{作者}}{2017年11月}
+\begin{onehalfspacing}
+\begin{itemize}
+    \item \textbf{项目简介}: 通用的C++遗传算法框架(gaft的C++版本)
+    \item \textbf{主要特性}: 内置常用遗传算子和编码方式; 支持自定义遗传算子和编码; 支持自定义适应度函数; 使用MPI并行化遗传算法具有良好的强扩展效率
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\href{https://github.com/PytLab/gaft}{\emph{VASPy}}\ (\faStar\ 62\ \faCodeFork\ 38), \emph{作者}}{2015年8月}
+\begin{onehalfspacing}
+\begin{itemize}
+    \item \textbf{项目简介}: Python实现的VASP数据处理框架(VASP是一种量子力学计算商业软件)
+    \item \textbf{主要特性}: 以VASP的输入输出文件作为基本对象来操作，大大简化了编写处理VASP数据脚本的编写
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\href{https://github.com/PytLab/simpleflow}{\emph{simpleflow}}\ (\faStar\ 48\ \faCodeFork\ 10), \emph{作者}}{2018年1月}
+\begin{onehalfspacing}
+\begin{itemize}
+    \item \textbf{项目简介}: 仿TensorFlow接口的简化版图计算框架
+    \item \textbf{主要特性}: 提供了计算图中常用的操作以及求导方法; 实现了前向传播与反向传播; 实现了梯度下降优化器;
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\href{https://github.com/PytLab/catplot}{\emph{catplot}}\ (\faStar\ 19\ \faCodeFork\ 8), \emph{作者}}{2015年3月}
+\begin{onehalfspacing}
+\begin{itemize}
+    \item \textbf{项目简介}: 基于matplotlib的2D/3D抽象网格和能量曲线绘制程序
+    \item \textbf{主要特性}: 使用插值算法绘制优美的能量曲线; 友好的接口方便灵活绘制2D/3D晶格示意图; 使用该程序作图发表的论文超过10篇
+\end{itemize}
+\end{onehalfspacing}
+
+\section{\faUser\ 社区贡献}
+
+\datedsubsection{\href{https://github.com/leetmaa/KMCLib}{\emph{KMCLib}}\ (\faStar\ 28\ \faCodeFork\ 24), \href{https://github.com/leetmaa/KMCLib/graphs/contributors}{\emph{维护者}}}{2016年7月 -- 至今}
+\begin{onehalfspacing}
+\begin{itemize}
+    \item \textbf{项目简介}: 瑞典皇家理工学院Leetmaa开发的动力学蒙特卡洛Python/C++库
+    \item \textbf{贡献}: 修复bug, 效率改进, 解决使用者提出的问题
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\href{https://github.com/wzpan/hexo-theme-freemind}{\emph{hexo-theme-freemind}}\ (\faStar\ 292\ \faCodeFork\ 131), \href{https://github.com/wzpan/hexo-theme-freemind/graphs/contributors}{\emph{贡献者}}}{2016年1月}
+\begin{onehalfspacing}
+\begin{itemize}
+    \item \textbf{项目简介}: 最受欢迎的 Hexo 博客主题之一
+    \item \textbf{贡献}: 添加文章分享功能和设置
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\emph{Python开发者微信公众号、Python开发者微博}, 编辑}{2016年3月 -- 2017年11月}
+
+\datedsubsection{\href{http://www.jobbole.com/members/shaozhengjiang/}{\emph{伯乐在线}}, \href{https://juejin.im/user/59f6fb0ff265da432e5b4ad0/posts}{\emph{掘金社区}}, \href{https://zhuanlan.zhihu.com/zimei}{\emph{Python中文社区}}, 专栏作者}{2016年3月 -- 至今}
+
+\section{\faTrophy\ 获奖情况}
+\datedline{\textit{优秀毕业论文, 优秀毕业生}, 校级}{2014年6月}
+\datedline{\textit{校综合奖学金二等, 化工区学生创新奖}, 校级}{2013年9月}
+\datedline{\textit{第六届中国大学生计算机设计大赛}, \href{http://www.jsjds.org/Article_Show.asp?ArticleID=245}{二等奖}}{2013年7月}
+
+\end{document}
